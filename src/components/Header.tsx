@@ -38,38 +38,34 @@ const Header = () => {
         </div>
 
        {/* NAV */}
-<nav className="hidden md:flex items-center gap-8">
-  {[
-    { label: "Servicios", href: "#servicios" },
-    { label: "Galería", href: "#galeria" },
-    { label: "Reseñas", href: "#reseñas" },
-    { label: "Contacto", href: "#contacto" },
-  ].map((item) => (
-    <a
-      key={item.href}
-      href={item.href}
-      className="relative group text-sm font-medium text-muted-foreground transition-colors"
-    >
-      <span className="transition-colors duration-300 group-hover:text-[#8B5E3C]">
-        {item.label}
-      </span>
+        <nav className="hidden md:flex items-center gap-8">
+          {[
+            { label: "Servicios", href: "#servicios" },
+            { label: "Galería", href: "#galeria" },
+            { label: "Reseñas", href: "#reseñas" },
+            { label: "Contacto", href: "#contacto" },
+          ].map((item) => (
+            <a
+              key={item.href}
+              href={item.href}
+              className="relative group text-sm font-medium text-muted-foreground transition-colors"
+            >
+              <span className="transition-colors duration-300 group-hover:text-[#8B5E3C]">
+                {item.label}
+              </span>
 
-      <span
-        className="
-          absolute left-0 -bottom-1
-          h-[2px] w-0
-          bg-[#8B5E3C]
-          transition-all duration-300
-          group-hover:w-full
-        "
-      />
-    </a>
-  ))}
-</nav>
-
-
-        {/* BOTÓN WHATSAPP */}
-       
+              <span
+                className="
+                  absolute left-0 -bottom-1
+                  h-[2px] w-0
+                  bg-[#8B5E3C]
+                  transition-all duration-300
+                  group-hover:w-full
+                "
+              />
+            </a>
+          ))}
+        </nav>
       </div>
     </header>
   );

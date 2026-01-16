@@ -57,7 +57,7 @@ const Services = () => {
       className="py-20 md:py-28 bg-gradient-subtle"
     >
       <div className="container">
-        {/* 🟢 MARCO VERDE */}
+        {/* MARCO GENERAL */}
         <div className="border-2 border-foreground rounded-3xl px-6 py-12 md:px-12 md:py-16">
           
           {/* INTRO */}
@@ -88,25 +88,18 @@ const Services = () => {
                 className="reveal opacity-0 translate-y-6 transition-all duration-700
                            bg-card p-8 rounded-xl
                            border-2 border-[#8B5E3C]/40
-                           hover:border-[#8B5E3C]
-                           hover:shadow-[0_10px_30px_rgba(139,94,60,0.25)]
-                           hover:-translate-y-1
-                           group"
+                           hover:border-[#8B5E3C]"
                 style={{ transitionDelay: `${index * 120}ms` }}
               >
-                {/* ICONO ARRIBA + IMAGEN */}
+                {/* ICONO + IMAGEN (ESTÁTICOS) */}
                 <div className="relative mb-8">
-                  
-                  {/* ICONO OUTLINE */}
+                  {/* ICONO */}
                   <div
                     className="absolute -top-6 left-5 z-10
                                w-12 h-12 rounded-xl
                                flex items-center justify-center
                                border-2 border-[#8B5E3C]
-                               bg-background/80 backdrop-blur
-                               transition-all duration-300
-                               group-hover:rotate-6
-                               group-hover:scale-110"
+                               bg-background"
                   >
                     <service.icon
                       className="w-5 h-5 text-[#8B5E3C]"
@@ -119,7 +112,8 @@ const Services = () => {
                     <img
                       src={service.image}
                       alt={service.title}
-                      className="w-full h-36 object-cover transition-transform duration-500 group-hover:scale-105"
+                      className="w-full h-36 object-cover"
+                      loading="lazy"
                     />
                   </div>
                 </div>
