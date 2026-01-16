@@ -69,15 +69,7 @@ const Header = () => {
 
 
         {/* BOTÓN WHATSAPP */}
-        <a
-          href={`https://wa.me/${whatsappNumber}?text=${whatsappMessage}`}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="flex items-center gap-2 bg-[#25D366] text-white px-4 py-2 rounded-lg hover:bg-[#20bd5a] transition-colors shadow-soft text-sm font-medium"
-        >
-          <Phone className="w-4 h-4" />
-          <span className="hidden sm:inline">WhatsApp</span>
-        </a>
+        
       </div>
     </header>
   );
