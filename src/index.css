@@ -1,0 +1,170 @@
+/* IMPORTS SIEMPRE PRIMERO */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap');
+
+/* TAILWIND */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ===== BASE TOKENS ===== */
+@layer base {
+  :root {
+    /* Natural palette inspired by Iguazú Falls */
+    --background: 0 0% 99%;
+    --foreground: 150 10% 15%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 150 10% 15%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 150 10% 15%;
+
+    /* Deep jungle green */
+    --primary: 160 45% 25%;
+    --primary-foreground: 0 0% 100%;
+
+    /* Soft sage */
+    --secondary: 150 20% 94%;
+    --secondary-foreground: 160 45% 20%;
+
+    /* Muted earth tones */
+    --muted: 150 10% 96%;
+    --muted-foreground: 150 10% 45%;
+
+    /* Water blue accent */
+    --accent: 195 70% 45%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 150 15% 90%;
+    --input: 150 15% 90%;
+    --ring: 160 45% 25%;
+
+    --radius: 0.5rem;
+
+    /* Custom tokens */
+    --jungle: 160 45% 25%;
+    --jungle-light: 160 35% 35%;
+    --water: 195 70% 45%;
+    --water-light: 195 60% 55%;
+    --mist: 180 20% 97%;
+    --earth: 35 30% 35%;
+
+    /* Typography */
+    --font-display: 'Playfair Display', serif;
+    --font-body: 'Inter', sans-serif;
+
+    /* Shadows */
+    --shadow-soft: 0 4px 20px -4px hsl(150 10% 15% / 0.08);
+    --shadow-medium: 0 8px 30px -6px hsl(150 10% 15% / 0.12);
+    --shadow-glow: 0 0 40px hsl(195 70% 45% / 0.15);
+  }
+
+  .dark {
+    --background: 150 15% 8%;
+    --foreground: 0 0% 95%;
+    --card: 150 15% 10%;
+    --card-foreground: 0 0% 95%;
+    --popover: 150 15% 10%;
+    --popover-foreground: 0 0% 95%;
+    --primary: 160 40% 50%;
+    --primary-foreground: 150 15% 8%;
+    --secondary: 150 15% 15%;
+    --secondary-foreground: 0 0% 95%;
+    --muted: 150 15% 15%;
+    --muted-foreground: 150 10% 60%;
+    --accent: 195 60% 55%;
+    --accent-foreground: 150 15% 8%;
+    --border: 150 15% 18%;
+    --input: 150 15% 18%;
+    --ring: 160 40% 50%;
+  }
+}
+
+/* ===== BASE STYLES ===== */
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: var(--font-body);
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-display);
+  }
+}
+
+/* ===== COMPONENTS ===== */
+@layer components {
+  .text-gradient {
+    @apply bg-clip-text text-transparent;
+    background-image: linear-gradient(
+      135deg,
+      hsl(var(--jungle)) 0%,
+      hsl(var(--water)) 100%
+    );
+  }
+
+  .bg-gradient-hero {
+    background: linear-gradient(
+      180deg,
+      hsl(var(--jungle) / 0.9) 0%,
+      hsl(var(--jungle) / 0.7) 50%,
+      transparent 100%
+    );
+  }
+
+  .bg-gradient-subtle {
+    background: linear-gradient(
+      180deg,
+      hsl(var(--mist)) 0%,
+      hsl(var(--background)) 100%
+    );
+  }
+
+  .glass {
+    background: hsl(var(--background) / 0.8);
+    backdrop-filter: blur(12px);
+    border: 1px solid hsl(var(--border) / 0.5);
+  }
+}
+
+/* ===== UTILITIES ===== */
+@layer utilities {
+  .animate-fade-up {
+    animation: fadeUp 0.6s ease-out forwards;
+  }
+
+  .animate-fade-in {
+    animation: fadeIn 0.5s ease-out forwards;
+  }
+
+  @keyframes fadeUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+}
