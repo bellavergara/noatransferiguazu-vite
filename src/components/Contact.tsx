@@ -84,7 +84,7 @@ const Contact = () => {
               className="w-full sm:w-auto"
             >
               <a
-                href={`https://instagram.com/${instagramHandle}`}
+                href={`https://www.instagram.com/noatransfer.6?igsh=MXdlZGV4Zm96ZGZkNw%3D%3D/${instagramHandle}`}
                 target="_blank"
                 rel="noopener noreferrer"
               >
