@@ -3,7 +3,7 @@ import { Phone, MapPin } from "lucide-react";
 import heroCataratas from "@/assets/hero-cataratas.jpg";
 
 const Hero = () => {
-  const whatsappNumber = "5493757000000";
+  const whatsappNumber = "5493757589868";
   const whatsappMessage = encodeURIComponent("Hola! Quiero reservar un traslado.");
 
   return (
