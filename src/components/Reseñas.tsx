@@ -5,7 +5,6 @@ import resena4 from "@/assets/images/resena4.jpg";
 import resena5 from "@/assets/images/resena5.jpg";
 import resena6 from "@/assets/images/resenas6.jpg";
 
-
 const reviews = [
   resena1,
   resena2,
@@ -14,7 +13,6 @@ const reviews = [
   resena5,
   resena6,
 ];
-
 
 const Testimonials = () => {
   return (
@@ -54,7 +52,7 @@ const Testimonials = () => {
           {reviews.map((img, index) => (
             <div
               key={index}
-              className="rounded-xl overflow-hidden border border-border bg-muted"
+              className="rounded-xl overflow-hidden border-2 border-primary bg-background"
             >
               <img
                 src={img}
