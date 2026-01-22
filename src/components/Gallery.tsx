@@ -1,6 +1,6 @@
 import { Camera } from "lucide-react";
 
-// Nuevas imágenes
+// Nuevas imágenes en assets 
 import cataratas from "@/assets/images/cataratas.jpg";
 import ruinas from "@/assets/images/ruinas.jpg";
 import paraguay from "@/assets/images/paraguay.jpg";
