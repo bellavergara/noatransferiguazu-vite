@@ -4,7 +4,6 @@ import { Phone, Instagram, MapPin, Clock } from "lucide-react";
 const Contact = () => {
   const whatsappNumber = "5493757589868";
   const whatsappMessage = encodeURIComponent("Hola! Me gustaría hacer una consulta sobre sus servicios de transporte.");
-  const instagramHandle = "remisiguazu";
 
   return (
     <section id="contacto" className="py-20 md:py-28 bg-primary text-primary-foreground">
@@ -84,7 +83,7 @@ const Contact = () => {
               className="w-full sm:w-auto"
             >
               <a
-                href={`https://www.instagram.com/noatransfer.6?igsh=MXdlZGV4Zm96ZGZkNw%3D%3D/${instagramHandle}`}
+                href="https://www.instagram.com/noatransfer.6/"
                 target="_blank"
                 rel="noopener noreferrer"
               >
